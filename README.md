@@ -1,12 +1,12 @@
 # 1. Introduction
-##Project Overview
+## Project Overview
 This project conducts rigorous analysis of financial news sentiment and its correlation with stock price movements. Leveraging the Financial News and Stock Price Integration Dataset (FNSPID), we combine:
 
 - Natural Language Processing (NLP) for sentiment scoring
 - Quantitative Finance Tools (TA-Lib, PyNance) for technical indicators
 - Statistical Modeling to establish predictive relationships
 
-##Business Context
+## Business Context
 Nova Financial Solutions aims to:
 ✔ Develop AI-driven trading signals from news sentiment
 ✔ Quantify the impact of media tone on market movements
@@ -17,9 +17,9 @@ Component	Technique	Outcome
 Sentiment Analysis	TextBlob/NLTK	Polarity scores (-1 to +1)
 Technical Indicators	TA-Lib	RSI, MACD, Bollinger Bands
 Correlation Analysis	SciPy/statsmodels	Pearson r & Granger Causality
-#2. Project Documentation
-##Dataset Specifications
-##FNSPID Schema
+# 2. Project Documentation
+## Dataset Specifications
+## FNSPID Schema
 
 Column	Type	Description
 headline	Text	News headline with financial triggers
@@ -29,13 +29,13 @@ date	DateTime	UTC-4 timestamp
 stock	String	Ticker symbol (e.g., AAPL)
 
 
-#3. Installation & Configuration
-##System Requirements
+# 3. Installation & Configuration
+## System Requirements
 - Python ≥3.8
 - Git LFS (for large datasets)
 - TA-Lib C library pre-installed
 
-##Setup Guide
+## Setup Guide
 # 1. Clone repo with LFS support  
 git lfs install  
 git clone https://github.com/your-repo/Predicting-Challenge-Week1.git  
@@ -47,15 +47,13 @@ python -m venv .venv && source .venv/bin/activate  # Unix
 # 3. Install dependencies  
 pip install -r requirements.txt  
 Critical Dependencies
-# Windows
-python -m venv .venv
-.\.venv\Scripts\activate
+ 
+pandas>=2.0, numpy>=1.24, scipy>=1.10  
+textblob>=0.17.1, nltk>=3.8  
+ta-lib==0.4.24, pynance>=1.2, yfinance>=0.2.18  
+matplotlib>=3.7, seaborn>=0.12  
 
-# macOS/Linux
-python -m venv .venv
-source .venv/bin/activate
-
-##Folder Architecture
+## Folder Architecture
 markdown
 ├── data/  
 │   ├── raw/               # Original FNSPID  
