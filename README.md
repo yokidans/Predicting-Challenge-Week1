@@ -1,4 +1,4 @@
-#1. Introduction
+# 1. Introduction
 ##Project Overview
 This project conducts rigorous analysis of financial news sentiment and its correlation with stock price movements. Leveraging the Financial News and Stock Price Integration Dataset (FNSPID), we combine:
 
@@ -47,16 +47,15 @@ python -m venv .venv && source .venv/bin/activate  # Unix
 # 3. Install dependencies  
 pip install -r requirements.txt  
 Critical Dependencies
+# Windows
+python -m venv .venv
+.\.venv\Scripts\activate
 
-# Analysis  
-pandas>=2.0, numpy>=1.24, scipy>=1.10  
-# NLP  
-textblob>=0.17.1, nltk>=3.8  
-# Finance  
-ta-lib==0.4.24, pynance>=1.2, yfinance>=0.2.18  
-# Visualization  
-matplotlib>=3.7, seaborn>=0.12  
-Folder Architecture
+# macOS/Linux
+python -m venv .venv
+source .venv/bin/activate
+
+##Folder Architecture
 markdown
 ├── data/  
 │   ├── raw/               # Original FNSPID  
