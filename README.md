@@ -7,7 +7,8 @@ This project conducts rigorous analysis of financial news sentiment and its corr
 - Statistical Modeling to establish predictive relationships
 
 ## Business Context
-Nova Financial Solutions aims to:
+
+## Nova Financial Solutions aims to:
 ✔ Develop AI-driven trading signals from news sentiment
 ✔ Quantify the impact of media tone on market movements
 ✔ Build a predictive framework for algorithmic trading
