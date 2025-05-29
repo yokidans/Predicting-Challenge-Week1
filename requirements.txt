@@ -9,7 +9,7 @@ nltk>=3.8
 
 # Finance  
 ta-lib==0.4.24
-pynance>=1.2
+pynance>=1.0
 yfinance>=0.2.18  
 
 # Visualization  
