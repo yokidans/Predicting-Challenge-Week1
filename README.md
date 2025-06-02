@@ -1,7 +1,7 @@
 
-# Quantitative Financial Analysis with TA-Lib and PyNance
+# Quantitative Financial Analysis with TA-Lib and PyNance(empyrical)
 
-This Task-2 branch performs quantitative financial analysis on stock market data using TA-Lib for technical indicators and PyNance for financial metrics. The goal is to derive actionable insights from price and volume data to support trading and investment decisions.
+This Task-2 branch performs quantitative financial analysis on stock market data using TA-Lib for technical indicators and PyNance(empyrical) for financial metrics. The goal is to derive actionable insights from price and volume data to support trading and investment decisions.
 
 
 ## Project Overview
@@ -46,7 +46,7 @@ This Task-2 branch performs quantitative financial analysis on stock market data
      - numpy (Numerical computations)
      - matplotlib/seaborn (Visualizations)
      - TA-Lib (Technical indicators)
-     - PyNance (financial metrics) and etc..
+     - empyrical (financial metrics) and etc..
 
 ## How to Use This Project
  ### 1. Clone the repository
