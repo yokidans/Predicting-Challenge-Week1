@@ -1,7 +1,7 @@
 
 # Quantitative Financial Analysis with TA-Lib and PyNance
 
-This project performs quantitative financial analysis on stock market data using TA-Lib for technical indicators and PyNance for financial metrics. The goal is to derive actionable insights from price and volume data to support trading and investment decisions.
+This Task-2 branch performs quantitative financial analysis on stock market data using TA-Lib for technical indicators and PyNance for financial metrics. The goal is to derive actionable insights from price and volume data to support trading and investment decisions.
 
 
 ## Project Overview
