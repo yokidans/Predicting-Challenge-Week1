@@ -12,6 +12,6 @@ Professional framework for technical analysis and algorithmic trading.
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/quant_analysis.git
-cd quant_analysis
+git clone https://github.com/yokidans/FNSAPP-Challenge-Week1.git
+cd FNSAPP-Challenge-Week1
 pip install -r requirements.txt
