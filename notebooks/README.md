@@ -1,6 +1,6 @@
 # Stock Trading Analysis Toolkit
 
-![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 A professional-grade toolkit for multi-stock technical analysis, performance benchmarking, and trading system development.
