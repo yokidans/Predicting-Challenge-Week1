@@ -1,6 +1,6 @@
 # Financial News Sentiment Analysis
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![Pandas](https://img.shields.io/badge/Pandas-1.3%2B-orange)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0%2B-yellowgreen)
 ![NLTK](https://img.shields.io/badge/NLTK-3.6%2B-lightgrey)
