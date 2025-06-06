@@ -1,73 +1,132 @@
-# Stock Trading Analysis Toolkit
+# Financial News Sentiment Analysis
 
-![Python](https://img.shields.io/badge/python-3.9%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![Pandas](https://img.shields.io/badge/Pandas-1.3%2B-orange)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0%2B-yellowgreen)
+![NLTK](https://img.shields.io/badge/NLTK-3.6%2B-lightgrey)
 
-A professional-grade toolkit for multi-stock technical analysis, performance benchmarking, and trading system development.
+A comprehensive pipeline for analyzing financial news sentiment, extracting key topics, and visualizing temporal patterns in news publications.
 
-## Key Features
+## Features
 
-### 📊 Professional Data Pipeline
-- **Dual-source data loading**  
-  - Automatic fallback between Yahoo Finance API and PyNance
-  - Local caching in CSV/Parquet formats
-  - Supports 1m, 5m, 15m, 1h, 1d timeframes
-- **Data Quality Assurance**  
-  - Automatic gap filling for missing periods
-  - OHLCV validation checks
-  - Corporate action adjustment (splits/dividends)
+- **Text Preprocessing**: Advanced cleaning with lemmatization and custom stopwords
+- **Topic Modeling**: LDA implementation with optimized parameters
+- **Sentiment Analysis**: Polarity and subjectivity scoring using TextBlob
+- **Time Series Analysis**: STL decomposition and publication frequency patterns
+- **Publisher Analytics**: Market share and sentiment by news source
+- **Interactive Visualizations**: Topic word clouds, temporal trends, and sentiment distributions
 
-### 📈 Comprehensive Technical Analysis
-- **TA-Lib Indicators (20+)**  
-  ```python
-  # Example indicator configuration
-  from talib import RSI, MACD
-  df['RSI_14'] = RSI(df['Close'], timeperiod=14)
-  df['MACD'], _, _ = MACD(df['Close'])
-  Trading System Ready
-Signal Generation
+## Requirements
+
+    bash
+          pip install pandas numpy matplotlib seaborn textblob nltk scikit-learn statsmodels wordcloud tqdm
+
+   
+## Features
+Data Preparation
+- Place your financial news dataset as fnspid_dataset.csv in the project root
+
+- Required columns: date, headline, publisher
+
+- Date format should be parseable by pandas (ISO8601 preferred)
+
+## Analysis Pipeline
+1. Descriptive Statistics
+ - Character and word count distributions
+
+ - Basic dataset metrics
+
+2. Topic Modeling
+- Custom text cleaning pipeline
+
+- CountVectorizer with optimal parameters
+
+- Latent Dirichlet Allocation (LDA) implementation
+
+- Interactive topic visualization
+
+
+# Example topic output
+    Topic 1: stock market shares trading company investors price...
+    Topic 2: bank federal reserve interest rates economy...
+    https://sample_images/topics.png
+
+3. Time Series Analysis
+- Daily/Weekly/Monthly publication frequencies
+
+- STL decomposition (trend, seasonality, residuals)
+
+- Intraday publication patterns
 
 python
-# Weighted signal example
-    signals = (0.4*df['RSI_signal'] + 
-          0.3*df['MACD_signal'] + 
-          0.3*df['Volume_signal'])
-- Backtesting Framework
+# Example time series output
+     Daily Counts:
+     2023-01-01    142
+     2023-01-02    156
+     2023-01-03    201
+     https://sample_images/stl_decomposition.png
 
-- Slippage modeling (0.1-0.5% configurable)
+4. Publisher Analytics
+- Market share by publication volume
 
-- Commission-aware returns
+- Domain extraction and normalization
 
-Benchmark-relative performance
+- Sentiment analysis by publisher
 
-📤 Production Outputs
-bash
-# Batch processing example
-    python analyze.py --tickers META AMZN GOOG --period 5y --output report.xlsx
-### Report Includes:
+      https://sample_images/publisher_share.png
 
-- Performance tear sheet
+5. Sentiment Analysis
+- Polarity (-1 to 1) and subjectivity (0 to 1) scoring
 
-- Risk metrics table
+- Temporal sentiment trends
 
-- Equity curve visualization
+- Publisher sentiment comparison
 
-- Position log (CSV)
+python
+# Example sentiment output
+               polarity  subjectivity
+    publisher                        
+    Reuters         0.12        0.45
+    Bloomberg       0.08        0.42
+    Financial Times 0.15        0.51
+     Output Files
+    File	Description
+    processed_financial_news.csv	Cleaned dataset with sentiment scores
+    discovered_topics.csv	Extracted topics and key words
+    publisher_stats.csv	Aggregated publisher metrics
+    *.png	All generated visualizations
+Customization
+Modify these parameters in the notebook:
 
-Installation
-bash
-pip install -r requirements.txt
-  ### Includes:
-    yfinance>=0.2.18
-    TA-Lib>=0.4.24
-    mplfinance>=0.12.9b7
-    analyzer = StockAnalyzer(tickers=['META', 'AMZN'], period='1y')
-    report = analyzer.generate_report()
-    report.save_excel('tech_stocks.xlsx')
-### Data Dictionary
-- Column	Description	Sample Values
-- SMA_20	20-day Simple MA	152.43
-- RSI_14	14-day RSI	67.2 (Overbought)
-- MACD_Hist	MACD Histogram	1.2 (Bullish)
+     python
+    # Topic modeling
+    N_TOPICS = 5           # Number of topics to extract
+    MAX_FEATURES = 5000    # Maximum vocabulary size
+
+    # Time series
+    RESAMPLE_FREQ = 'D'    # 'D'aily, 'W'weekly, 'M'onthly
+
+    # Visualization
+    COLOR_PALETTE = 'viridis'  # matplotlib colormap
+## Troubleshooting
+### Common Issues:
+- Date parsing errors:
+
+- Check your CSV date format
+
+- Explicitly specify format: pd.to_datetime(..., format='%Y-%m-%d')
+
+### Memory errors:
+
+- Reduce sample size: working_df = df.sample(5000)
+
+- Decrease MAX_FEATURES
+
+### Visualization issues:
+
+- Update libraries: pip install --upgrade seaborn matplotlib
+
+- Restart kernel after installation
+
 # License
-MIT License - Free for commercial and academic use with attribution.
+MIT License - Free for academic and commercial use
