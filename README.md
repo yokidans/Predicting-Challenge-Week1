@@ -18,7 +18,7 @@ A comprehensive pipeline for analyzing financial news sentiment, extracting key 
 
 ## Requirements
 
-    '''bash
+    bash
           pip install pandas numpy matplotlib seaborn textblob nltk scikit-learn statsmodels wordcloud tqdm
 
    
